@@ -19,4 +19,7 @@ function twoDecimalPlaces(n) {
     // function twoDecimalPlaces(n) {
     //     return +n.toFixed(2);
     // }
+
+    // OR
+    // const twoDecimalPlaces = n =>  Number(n.toFixed(2))
 }
