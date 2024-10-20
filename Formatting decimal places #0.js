@@ -11,6 +11,12 @@
 
 // ✅ SOLUTION
 function twoDecimalPlaces(n) {
+    // Option 1
     return Math.round(n * 100) / 100;
     console.log(n);
+
+    // // Option 2
+    // function twoDecimalPlaces(n) {
+    //     return +n.toFixed(2);
+    // }
 }
