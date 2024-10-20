@@ -11,6 +11,5 @@
 
 // ✅ SOLUTION
 function hexToDec(hexString) {
-    const decimalValue = parseInt(hexString, 16);
-    console.log(decimalValue);
+    return parseInt(hexString, 16);
 }
