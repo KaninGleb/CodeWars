@@ -25,6 +25,14 @@ function arrayPlusArray(arr1, arr2) {
     return totalSum;
 }
 
+// Option 2
+// function arrayPlusArray(arr1, arr2) {
+//     const sum1 = arr1.reduce((accumulator, num) => accumulator + num, 0);
+//     const sum2 = arr2.reduce((accumulator, num) => accumulator + num, 0);
+//     return sum1 + sum2;
+// }
+
+
 console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]));
 console.log(arrayPlusArray([-1, -2, -3], [-4, -5, -6]));
 console.log(arrayPlusArray([0, 0, 0], [4, 5, 6]));
