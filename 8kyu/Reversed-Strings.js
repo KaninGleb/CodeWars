@@ -28,6 +28,16 @@ function solution(str) {
 }
 
 
+// OPTION 3
+function solution(str) {
+    let reversed = "";
+    for (let i of str) {
+        reversed = i + reversed;
+    }
+    return reversed;
+}
+
+
 console.log(solution('world'));
 console.log(solution('hello'));
 console.log(solution(''));
