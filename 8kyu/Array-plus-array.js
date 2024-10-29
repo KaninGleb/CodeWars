@@ -11,6 +11,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1 
 function arrayPlusArray(arr1, arr2) {
     let totalSum = 0;
     for (let i = 0; i < arr1.length; i++) {
