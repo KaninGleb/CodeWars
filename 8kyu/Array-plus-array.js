@@ -25,12 +25,19 @@ function arrayPlusArray(arr1, arr2) {
     return totalSum;
 }
 
+
 // OPTION 2
 // function arrayPlusArray(arr1, arr2) {
 //     const sum1 = arr1.reduce((accumulator, num) => accumulator + num, 0);
 //     const sum2 = arr2.reduce((accumulator, num) => accumulator + num, 0);
 //     return sum1 + sum2;
 // }
+
+
+// OPTION 3
+// function arrayPlusArray(arr1, arr2) {
+//     return arr1.concat(arr2).reduce((accumulator, current) => accumulator + current);
+//     }
 
 
 console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]));
