@@ -16,12 +16,19 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function trueOrFalse (val) {
     if (!val) {
         return "false"
     } else {
         return "true"
     }
+}
+
+
+// OPTION 2
+function trueOrFalse (val) {
+    return !val ? "false" : "true"
 }
 
 
