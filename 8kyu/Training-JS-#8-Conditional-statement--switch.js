@@ -69,6 +69,13 @@ function howManydays(month) {
 }
 
 
+// OPTION 4 
+function howManydays(month) {
+    const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    return daysInMonth[month];
+}
+
+
 // ✅ Checking
 console.log(howManydays(1) === 31);
 console.log(howManydays(2) === 28);
