@@ -43,8 +43,17 @@ let questions = [{
 }];
 
 
+// OPTION 1
 function addUserAnswer (questions) {
     questions.forEach(function(question) {
+        question.usersAnswer = null;
+    })
+}
+
+
+// OPTION 2
+function addUserAnswer (questions) {
+    questions.forEach(question => {
         question.usersAnswer = null;
     })
 }
