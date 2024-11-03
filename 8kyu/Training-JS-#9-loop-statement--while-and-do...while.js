@@ -18,6 +18,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function padIt(str, n) {
     let i = 0;
     while (i < n) {
@@ -32,9 +33,31 @@ function padIt(str, n) {
 }
 
 
+// OPTION 2
+function padIt(str, n) {
+    for (let i = 0; i < n; i++) {
+        if (i % 2 ===0) {
+            str = '*' + str;
+        } else {
+            str += '*';
+        }
+    }
+    return str;
+}
+
+
+// OPTION 3
+function padIt(str, n) {
+    const leftStars = '*'.repeat(Math.ceil(n / 2));
+    const rightStars = '*'.repeat(Math.floor(n / 2));
+    return leftStars + str + rightStars;
+}
+
+
 // ✅ Checking
-console.log(padIt("a", 1) === "*a");
-console.log(padIt("a", 2) === "*a*");
-console.log(padIt("a", 3) === "**a*");
-console.log(padIt("a", 4) === "**a**");
-console.log(padIt("a", 5) === "***a**");
+console.log(padIt("a", 1));
+console.log(padIt("a", 2));
+console.log(padIt("a", 3));
+console.log(padIt("a", 4));
+console.log(padIt("a", 5));
+console.log(padIt("a", 6));
