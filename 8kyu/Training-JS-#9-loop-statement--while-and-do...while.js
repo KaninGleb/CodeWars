@@ -46,11 +46,18 @@ function padIt(str, n) {
 }
 
 
-// OPTION 3
+// OPTION 3 ― Math
 function padIt(str, n) {
     const leftStars = '*'.repeat(Math.ceil(n / 2));
     const rightStars = '*'.repeat(Math.floor(n / 2));
     return leftStars + str + rightStars;
+}
+
+
+// OPTION 4 ― Recursive call
+function padIt(str, n) {
+    if (n === 0) return str;
+    return padIt(n % 2 === 0 ? str + '*' : '*' + str, n - 1);
 }
 
 
