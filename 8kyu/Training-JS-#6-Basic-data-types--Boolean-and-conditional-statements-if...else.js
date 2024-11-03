@@ -19,17 +19,21 @@
 // OPTION 1
 function trueOrFalse (val) {
     if (!val) {
-        return "false"
+        return "false";
     } else {
-        return "true"
+        return "true";
     }
 }
 
 
 // OPTION 2
 function trueOrFalse (val) {
-    return !val ? "false" : "true"
+    return !val ? "false" : "true";
 }
+
+
+// OPTION 3
+const trueOrFalse = val => !val ? "false" : "true";
 
 
 // ✅ Checking
