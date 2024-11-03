@@ -17,7 +17,15 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function saleHotdogs(n) {
+    const pricePerUnit = n < 5 ? 100 : n < 10 ? 95 : 90;
+    return n * pricePerUnit;
+}
+
+
+// OPTION 2
+const saleHotdogs = n => {
     const pricePerUnit = n < 5 ? 100 : n < 10 ? 95 : 90;
     return n * pricePerUnit;
 }
