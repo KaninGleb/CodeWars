@@ -13,6 +13,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 let summation = function (num) {
     let sum = 0;
     for (let i = 0; i <= num; i++) {
@@ -20,3 +21,19 @@ let summation = function (num) {
     }
     return sum;
 }
+
+
+// OPTION 2
+function summation (num) {
+    return num * (num + 1) / 2;
+}
+
+
+// OPTION 3
+const summation = n => n * (n + 1) / 2;
+
+
+// ✅ Checking
+console.log(summation(5));
+console.log(summation(7));
+console.log(summation(10));
