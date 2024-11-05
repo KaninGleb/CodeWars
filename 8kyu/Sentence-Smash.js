@@ -27,6 +27,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function smash(words) {
     let result = '';
     for (let i = 0; i < words.length; i++) {
@@ -37,6 +38,10 @@ function smash(words) {
     }
     return result;
 }
+
+
+// OPTION 2
+const smash = (words) => words.join(" ");
 
 
 // ✅ Checking
