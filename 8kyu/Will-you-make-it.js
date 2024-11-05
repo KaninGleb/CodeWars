@@ -11,6 +11,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     const maxDistance = mpg * fuelLeft;
     if (maxDistance >= distanceToPump) {
@@ -21,6 +22,13 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 }
 
 
+// OPTION 2
+const zeroFuel2 = (distanceToPump, mpg, fuelLeft) => mpg * fuelLeft >= distanceToPump;
+
+
 // ✅ Checking
 console.log(zeroFuel(50, 25, 2));
 console.log(zeroFuel(100, 50, 1));
+
+console.log(zeroFuel2(50, 25, 2));
+console.log(zeroFuel2(100, 50, 1));
