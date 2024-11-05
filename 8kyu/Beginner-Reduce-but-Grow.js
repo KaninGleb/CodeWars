@@ -18,3 +18,18 @@ function grow(x){
     }
     return sum;
 }
+
+
+// OPTION 2
+function grow(x) {
+    return x.reduce((accumulator, currentVal) => accumulator * currentVal, 1);
+}
+
+
+// OPTION 3
+const growX = x => x.reduce((accumulator, currentVal) => accumulator * currentVal, 1);
+
+
+// ✅ Checking
+const result = grow([1, 2, 3, 4]);
+console.log(result);
