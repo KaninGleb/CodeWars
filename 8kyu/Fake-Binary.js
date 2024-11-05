@@ -24,7 +24,15 @@ function fakeBin(x){
 }
 
 
+// OPTION 2
+const fakeBin2 = x => x.split('').map(x => (x < '5' ? '0' : '1')).join('');
+
+
 // ✅ Checking
-console.log(fakeBin("1234567890")); // Вывод: "0001111000"
-console.log(fakeBin("5555555555")); // Вывод: "1111111111"
-console.log(fakeBin("00000"));       // Вывод: "00000"
+console.log(fakeBin("1234567890"));
+console.log(fakeBin("5555555555"));
+console.log(fakeBin("00000"));
+
+console.log(fakeBin2("1234567890"));
+console.log(fakeBin2("5555555555"));
+console.log(fakeBin2("00000"));
