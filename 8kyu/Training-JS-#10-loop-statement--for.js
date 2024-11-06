@@ -14,6 +14,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function pickIt(arr) {
     let odd = [],
         even = [];
@@ -23,6 +24,17 @@ function pickIt(arr) {
         } else {
             odd.push(arr[i]);
         }
+    }
+    return [odd, even];
+}
+
+
+// OPTION 2
+function pickIt(arr) {
+    let odd = [],
+        even = [];
+    for (const num of arr) {
+        ((num % 2) ? odd : even).push(num);
     }
     return [odd, even];
 }
