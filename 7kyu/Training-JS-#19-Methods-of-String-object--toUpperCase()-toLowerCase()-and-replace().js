@@ -19,6 +19,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function alienLanguage (str) {
     let words = str.split(' ');
     for (let i = 0; i < words.length; i++) {
@@ -29,6 +30,10 @@ function alienLanguage (str) {
     }
     return words.join(' ');
 }
+
+
+// OPTION 2
+const alienLanguage = str => str.toUpperCase().replace(/\w\b/g, m => m.toLowerCase());
 
 
 // ✅ Checking
