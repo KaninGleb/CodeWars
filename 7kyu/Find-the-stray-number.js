@@ -15,12 +15,19 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function stray (numbers) {
     let uniqueNumber = 0;
     for (let i = 0; i < numbers.length; i++) {
         uniqueNumber ^= numbers[i];
     }
     return uniqueNumber;
+}
+
+
+// OPTION 2
+function stray(numbers) {
+    return numbers.filter(num => numbers.indexOf(num) === numbers.lastIndexOf(num))[0];
 }
 
 
