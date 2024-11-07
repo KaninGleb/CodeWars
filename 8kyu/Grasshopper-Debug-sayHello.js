@@ -13,9 +13,14 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function sayHello (name) {
     return `Hello, ${name}`
 }
+
+
+// OPTION 2
+const sayHello = name => 'Hello, ' + name
 
 
 // ✅ Checking
