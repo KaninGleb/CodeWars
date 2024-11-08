@@ -17,6 +17,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function countSheeps(sheep) {
     let counter = 0;
     for (let i = 0; i < sheep.length; i++) {
@@ -26,6 +27,18 @@ function countSheeps(sheep) {
             counter += 1;
         } else {
             counter = counter;
+        }
+    }
+    return counter;
+}
+
+
+// OPTION 2
+function countSheeps(sheep) {
+    let counter = 0;
+    for (let i = 0; i < sheep.length; i++) {
+        if (sheep[i] === true) {
+            counter += 1;
         }
     }
     return counter;
