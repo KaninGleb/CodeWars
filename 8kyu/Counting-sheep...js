@@ -45,6 +45,12 @@ function countSheeps(sheep) {
 }
 
 
+// OPTION 3
+function countSheeps(sheep) {
+    return sheep.filter(Boolean).length;
+}
+
+
 // ✅ Checking
 const sheeps = [true, true, true, false,
     true, true, true, true,
