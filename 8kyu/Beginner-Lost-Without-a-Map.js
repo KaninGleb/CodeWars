@@ -13,19 +13,23 @@
 
 // ✅ SOLUTION
 // OPTION 1
-// function maps (x) {
-//     let result = [];
-//     for (let i = 0; i < x.length; i++) {
-//         result.push(x[i] * 2);
-//     }
-//     return result;
-// }
+function maps (x) {
+    let result = [];
+    for (let i = 0; i < x.length; i++) {
+        result.push(x[i] * 2);
+    }
+    return result;
+}
 
 
 // OPTION 2
 function maps (x) {
     return x.map(item => item * 2);
 }
+
+
+// OPTION 3
+const maps = x => x.map(item => item * 2);
 
 
 // ✅ Checking
