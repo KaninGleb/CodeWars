@@ -13,12 +13,18 @@
 
 // ✅ SOLUTION
 // OPTION 1
+// function maps (x) {
+//     let result = [];
+//     for (let i = 0; i < x.length; i++) {
+//         result.push(x[i] * 2);
+//     }
+//     return result;
+// }
+
+
+// OPTION 2
 function maps (x) {
-    let result = [];
-    for (let i = 0; i < x.length; i++) {
-        result.push(x[i] * 2);
-    }
-    return result;
+    return x.map(item => item * 2);
 }
 
 
