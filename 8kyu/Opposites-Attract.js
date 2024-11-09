@@ -12,9 +12,22 @@
 
 
 // ✅ SOLUTION
-function lovefunc(flower1, flower2) {
+// OPTION 1
+function lovefunc (flower1, flower2) {
     return (flower1 % 2 === 0 && flower2 % 2 === 1) || (flower1 % 2 === 1 && flower2 % 2 === 0);
 }
+
+
+// OPTION 2
+const lovefunc = (flower1, flower2) => (flower1 + flower2) % 2 === 1;
+
+
+// Extra Option
+// const
+//        lovefunc
+//       =( Ͼ , Ͽ )=> 
+//           ! !
+// ( ( Ͼ & 1) ^ (1 & Ͽ ) )
 
 
 // ✅ Checking
