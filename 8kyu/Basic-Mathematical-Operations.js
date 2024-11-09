@@ -19,22 +19,38 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
+// function basicOp(operation, value1, value2) {
+//     switch (operation) {
+//         case '+':
+//             result = value1 + value2;
+//             break;
+//         case '-':
+//             result = value1 - value2;
+//             break;
+//         case '*':
+//             result = value1 * value2;
+//             break;
+//         case '/':
+//             result = value1 / value2;
+//             break;
+//     }
+//     return result;
+// }
+
+
+// OPTION 2
 function basicOp(operation, value1, value2) {
-    switch (operation) {
-        case '+':
-            result = value1 + value2;
-            break;
-        case '-':
-            result = value1 - value2;
-            break;
-        case '*':
-            result = value1 * value2;
-            break;
-        case '/':
-            result = value1 / value2;
-            break;
+    const operations = {
+        '+': (a, b) => a + b,
+        '-': (a, b) => a - b,
+        '*': (a, b) => a * b,
+        '/': (a, b) => a / b,
+    };
+
+    if (operations[operation]) {
+        return operations[operation](value1, value2);
     }
-    return result;
 }
 
 
