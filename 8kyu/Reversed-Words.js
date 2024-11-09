@@ -17,6 +17,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function reverseWords(str) {
     const words = str.split(' ');
     const reversedWords = [];
@@ -26,6 +27,10 @@ function reverseWords(str) {
     }
     return reversedWords.join(' ');
 }
+
+
+// OPTION 2
+const reverseWords = str => str.split(' ').reverse().join(' ');
 
 
 // ✅ Checking
