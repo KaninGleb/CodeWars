@@ -18,6 +18,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function sum (numbers) {
     let result = 0;
     for (let i = 0; i < numbers.length; i++) {
@@ -25,3 +26,15 @@ function sum (numbers) {
     }
     return result;
 }
+
+
+// OPTION 2
+function sum (numbers) {
+    return numbers.reduce((accumulator, current) => accumulator + current, 0);
+}
+
+
+// ✅ Checking
+console.log(sum([]));
+console.log(sum([1, 5.2, 4, 0, -1]));
+console.log(sum([-2.398]));
