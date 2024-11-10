@@ -11,6 +11,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function removeChar (str) {
     const charArray = str.split('');
 
@@ -19,3 +20,17 @@ function removeChar (str) {
 
     return charArray.join('');
 }
+
+
+// OPTION 2
+function removeChar (str) {
+    return str.slice(1, -1);
+}
+
+
+// ✅ Checking
+console.log(removeChar('eloquent'));
+console.log(removeChar('country'));
+console.log(removeChar('person'));
+console.log(removeChar('place'));
+console.log(removeChar('ooopsss'));
