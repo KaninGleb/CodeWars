@@ -7,10 +7,15 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function doubleInteger(i) {
     i = i * 2;
     return i;
 }
+
+
+// OPTION 2
+const doubleInteger = i => i * 2;
 
 
 // ✅ Checking
