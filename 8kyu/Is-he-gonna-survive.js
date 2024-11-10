@@ -14,12 +14,19 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function hero(bullets, dragons) {
     if (bullets >= dragons * 2) {
         return true;
     } else {
         return false;
     }
+}
+
+
+// OPTION 2
+function hero(bullets, dragons) {
+    return bullets >= dragons * 2 ? true : false;
 }
 
 
