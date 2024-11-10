@@ -14,6 +14,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function noSpace(x) {
     let result = '';
     for (let i = 0; i < x.length; i++) {
@@ -23,6 +24,10 @@ function noSpace(x) {
     }
     return result;
 }
+
+
+// OPTION 2
+const noSpace = x => x.split(' ').join('');
 
 
 // ✅ Checking
