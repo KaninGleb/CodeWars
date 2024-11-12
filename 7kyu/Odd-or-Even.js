@@ -34,10 +34,15 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function oddOrEven (array) {
     const summary = array.reduce((acc, n) => acc + n, 0);
     return summary % 2 ? 'odd' : 'even';
 }
+
+
+// OPTION 2
+const oddOrEven = arr => arr.reduce((acc, num) => acc + num, 0) % 2 ? 'odd' : 'even';
 
 
 // ✅ Checking
