@@ -14,6 +14,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function countBy(x, n) {
     let z = [];
     let num = 0;
@@ -23,5 +24,17 @@ function countBy(x, n) {
     return z;
 }
 
+
+// OPTION 2
+function countBy(x, n) {
+    let z = [];
+    for (let i = 0; i <= n; i++) {
+        z.push(x * i);
+    }
+    return z;
+}
+
+
+// ✅ Checking
 console.log(countBy(1, 10));
 console.log(countBy(2, 5));
