@@ -32,6 +32,10 @@ function simpleMultiplication(num) {
 const simpleMultiplication = num => num % 2 === 0 ? num * 8 : num * 9;
 
 
+// OPTION 4
+const simpleMultiplication = num => num * (num % 2 ? 9 : 8);
+
+
 // ✅ Checking
 console.log(simpleMultiplication(2));
 console.log(simpleMultiplication(1));
