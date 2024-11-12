@@ -40,6 +40,12 @@ function betterThanAverage(classPoints, yourPoints) {
 }
 
 
+// OPTION 3
+function betterThanAverage(classPoints, yourPoints) {
+    return yourPoints > classPoints.reduce((a,b) => a + b, 0) / classPoints.length;
+}
+
+
 // ✅ Checking
 console.log(betterThanAverage([2, 3], 5));
 console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));
