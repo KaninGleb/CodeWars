@@ -18,9 +18,14 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function quotable(name, quote) {
     return `${name} said: "${quote}"`
 }
+
+
+// OPTION 2
+const quotable = (name, quote) => `${name} said: "${quote}"`;
 
 
 // ✅ Checking
