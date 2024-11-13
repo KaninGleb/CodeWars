@@ -13,6 +13,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function correctTail(body, tail) {
     sub = body.substr(body.length - tail.length);
     if (sub === tail) {
@@ -20,6 +21,13 @@ function correctTail(body, tail) {
     } else {
         return false
     }
+}
+
+
+// OPTION 2
+function correctTail(body, tail) {
+    sub = body.substr(body.length - tail.length);
+    return sub === tail ? true : false;
 }
 
 
