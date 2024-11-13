@@ -35,6 +35,10 @@ function correctTail(body, tail) {
 const correctTail = (body, tail) => sub = body.substr(body.length - tail.length) === tail;
 
 
+// OPTION 4
+const correctTail = (body, tail) => body.endsWith(tail);
+
+
 // ✅ Checking
 console.log(correctTail("Fox", "x"));
 console.log(correctTail("Rhino", "o"));
