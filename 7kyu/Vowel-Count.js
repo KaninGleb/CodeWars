@@ -11,18 +11,32 @@
 
 
 // ✅ SOLUTION
-function getCount(str) {
-    vowels = {
-        a: 1,
-        e: 1,
-        i: 1,
-        o: 1,
-        u: 1,
-    }
+// OPTION 1
+// function getCount (str) {
+//     vowels = {
+//         a: 1,
+//         e: 1,
+//         i: 1,
+//         o: 1,
+//         u: 1,
+//     }
 
+//     sum = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (vowels[str[i]] == true) {
+//             sum++
+//         }
+//     }
+//     return sum
+// }
+
+
+// OPTION 2
+function getCount(str) {
+    vowels = 'aeiou'
     sum = 0;
     for (let i = 0; i < str.length; i++) {
-        if (vowels[str[i]] == true) {
+        if (vowels.includes(str[i]) == true) {
             sum++
         }
     }
@@ -31,4 +45,4 @@ function getCount(str) {
 
 
 // ✅ Checking
-console.log(getCount("abracadabra")) ;
+console.log(getCount("abracadabra"));
