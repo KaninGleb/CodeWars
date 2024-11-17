@@ -13,16 +13,23 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function getAge(inputString) {
     const splitString = inputString.split(' ');
 
     for (const element of splitString) {
         number = Number(element);
-        
+
         if (!isNaN(number)) {
             return number;
         }
     }
+}
+
+
+// OPTION 2
+function getAge(inputString) {
+    return parseInt(inputString[0], 10);
 }
 
 
