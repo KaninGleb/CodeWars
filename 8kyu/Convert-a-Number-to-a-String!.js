@@ -14,9 +14,14 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function numberToString(num) {
     return String(num);
 }
+
+
+// OPTION 2
+const numberToString = num => String(num);
 
 
 // ✅ Checking
