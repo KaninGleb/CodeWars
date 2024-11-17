@@ -21,6 +21,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function separateTypes(input) {
     const resultObj = {
         number: [],
@@ -44,7 +45,29 @@ function separateTypes(input) {
 }
 
 
+// OPTION 2
+function separateTypes(input) {
+    const resultObj = {};
+
+    for (let i = 0; i < input.length; i++) {
+        if (typeof input[i] === 'number') {
+            if (!resultObj.number) resultObj.number = [];
+            resultObj.number.push(input[i]);
+        } else if (typeof input[i] === 'string') {
+            if (!resultObj.string) resultObj.string = [];
+            resultObj.string.push(input[i]);
+        } else if (typeof input[i] === 'boolean') {
+            if (!resultObj.boolean) resultObj.boolean = [];
+            resultObj.boolean.push(input[i]);
+        }
+    }
+    return resultObj;
+}
+
+
 // ✅ Checking
 console.log(separateTypes(['a', 1, 2, false, 'b']));
 console.log(separateTypes(['a', 1, 2]));
-console.log(separateTypes([1, 'text', true, {key: 'value'}, 42, 'another text']));
+console.log(separateTypes([1, 'text', true, {
+    key: 'value'
+}, 42, 'another text']));
