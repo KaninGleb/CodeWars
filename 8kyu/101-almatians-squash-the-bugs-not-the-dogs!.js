@@ -21,23 +21,31 @@
 // OPTION 1
 function howManyDalmatians(number) {
     const dogs = [
-        "Hardly any",               // 1-9
-        "More than a handful!",     // 10-50
-        "Woah that's a lot of dogs!", // 51-100
-        "101 DALMATIANS!!!"         // Exactly 101
+        "Hardly any",
+        "More than a handful!",
+        "Woah that's a lot of dogs!",
+        "101 DALMATIANS!!!"
     ];
 
     if (number < 10) {
-        return dogs[0]; // "Hardly any"
+        return dogs[0];
     } else if (number <= 50) {
-        return dogs[1]; // "More than a handful!"
+        return dogs[1];
     } else if (number === 101) {
-        return dogs[3]; // "101 DALMATIANS!!!"
+        return dogs[3];
     } else {
-        return dogs[2]; // "Woah that's a lot of dogs!"
+        return dogs[2];
     }
 }
 
+
+// OPTION 2
+function howManyDalmatians(number) {
+    return number < 10 ? "Hardly any" :
+           number <= 50 ? "More than a handful!" :
+           number === 101 ? "101 DALMATIANS!!!" :
+           "Woah that's a lot of dogs!";
+}
 
 
 // ✅ Checking
