@@ -18,10 +18,10 @@
 function sortArray(array) {
     const oddNum = array.filter(num => num % 2 !== 0).sort((a, b) => a - b);
 
-    let oddIndex = 0;
+    let counter = 0;
     const result = array.map(num => {
         if (num % 2 !== 0) {
-            return oddNum[oddIndex++];
+            return oddNum[counter++];
         }
         return num;
     })
