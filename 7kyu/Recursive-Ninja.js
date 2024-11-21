@@ -14,7 +14,17 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function chirp(n) {
+    if (n <= 0) {
+        return '';
+    }
+    return 'chirp' + (n > 1 ? '-' : '') + chirp(n - 1);
+}
+
+
+// OPTION 2
+const chirp = n => {
     if (n <= 0) {
         return '';
     }
