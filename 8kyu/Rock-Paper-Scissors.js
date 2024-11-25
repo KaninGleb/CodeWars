@@ -22,6 +22,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const rps = (p1, p2) => {
     if (p1 === p2) {
         return 'Draw!';
@@ -37,6 +38,25 @@ const rps = (p1, p2) => {
 }
 
 
+// OPTION 2
+const rps2 = (p1, p2) => {
+    if (p1 === p2) {
+        return 'Draw!';
+    }
+
+    switch (p1) {
+        case 'rock':
+            return (p2 === 'scissors') ? 'Player 1 won!' : 'Player 2 won!';
+        case 'paper':
+            return (p2 === 'rock') ? 'Player 1 won!' : 'Player 2 won!';
+        case 'scissors':
+            return (p2 === 'paper') ? 'Player 1 won!' : 'Player 2 won!';
+        default:
+            return 'Invalid input';
+    }
+}
+
+
 // ✅ Checking
 console.log(rps('rock', 'scissors'));
 console.log(rps('scissors', 'paper'));
@@ -47,3 +67,13 @@ console.log(rps('rock', 'paper'));
 console.log(rps('rock', 'rock'));
 console.log(rps('scissors', 'scissors'));
 console.log(rps('paper', 'paper'));
+
+console.log(rps2('rock', 'scissors'));
+console.log(rps2('scissors', 'paper'));
+console.log(rps2('paper', 'rock'));
+console.log(rps2('scissors', 'rock'));
+console.log(rps2('paper', 'scissors'));
+console.log(rps2('rock', 'paper'));
+console.log(rps2('rock', 'rock'));
+console.log(rps2('scissors', 'scissors'));
+console.log(rps2('paper', 'paper'));
