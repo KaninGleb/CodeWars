@@ -22,9 +22,14 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function litres(time) {
     return Math.floor(time / 2);
 }
+
+
+// OPTION 2
+const litres = time => Math.floor(time / 2);
 
 
 // ✅ Checking
