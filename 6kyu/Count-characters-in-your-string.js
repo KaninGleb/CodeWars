@@ -13,6 +13,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const count = string => {
     const obj = {};
 
@@ -27,9 +28,30 @@ const count = string => {
 }
 
 
+// OPTION 2
+const count2 = string => {
+    const obj = {};
+
+    [...string].forEach(key => {
+        if (obj[key]) {
+            obj[key]++;
+        } else {
+            obj[key] = 1;
+        }
+    })
+    return obj;
+}
+
+
 // ✅ Checking
 console.log(count(''));
 console.log(count('a'));
 console.log(count('ab'));
 console.log(count('aba'));
 console.log(count('ABC'));
+
+console.log(count2(''));
+console.log(count2('a'));
+console.log(count2('ab'));
+console.log(count2('aba'));
+console.log(count2('ABC'));
