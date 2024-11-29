@@ -19,6 +19,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const descendingOrder = n => {
     const num = n.toString()
         .split('')
@@ -29,7 +30,15 @@ const descendingOrder = n => {
 }
 
 
+// OPTION 2
+const descendingOrder2 = n => Number(n.toString().split('').sort((a, b) => b - a).join(''));
+
+
 // ✅ Checking
 console.log(descendingOrder(42145));
 console.log(descendingOrder(145263));
 console.log(descendingOrder(123456789));
+
+console.log(descendingOrder2(42145));
+console.log(descendingOrder2(145263));
+console.log(descendingOrder2(123456789));
