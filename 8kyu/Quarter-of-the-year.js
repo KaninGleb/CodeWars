@@ -14,6 +14,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const quarterOf = (month) => {
     if (month >= 1 && month <= 3) {
         return 1;
@@ -27,7 +28,15 @@ const quarterOf = (month) => {
 }
 
 
+// OPTION 2
+const quarterOf2 = month => Math.ceil(month / 3);
+
+
 // ✅ Checking
 console.log(quarterOf(3));
 console.log(quarterOf(8));
 console.log(quarterOf(11));
+
+console.log(quarterOf2(3));
+console.log(quarterOf2(8));
+console.log(quarterOf2(11));
