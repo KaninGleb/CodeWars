@@ -18,4 +18,7 @@
 
 // ✅ SOLUTION
 class Solution{
+    static main(param) {
+        console.log("Hello World!");
+    }
 }
