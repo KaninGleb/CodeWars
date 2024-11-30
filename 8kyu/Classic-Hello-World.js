@@ -4,8 +4,8 @@
 // Note that for some languages, the function main is the entry point of the program.
 
 // Here's how it will be tested:
+// Solution.main("parameter1","parameter2");
 
-//     Solution.main("parameter1","parameter2");
 // Hints:
 // 1. Check your references
 // 2. Think about the scope of your method
