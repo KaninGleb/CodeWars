@@ -36,7 +36,13 @@ const incrementer = nums => {
 }
 
 
-
+// OPTION 2
+const incrementer = nums => {
+    return nums.map((num, index) => {
+        const value = num + (index + 1);
+        return value % 10;
+    });
+}
 
 
 // ✅ Checking
