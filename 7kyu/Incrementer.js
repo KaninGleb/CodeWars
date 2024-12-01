@@ -37,7 +37,7 @@ const incrementer = nums => {
 
 
 // OPTION 2
-const incrementer = nums => {
+const incrementer2 = nums => {
     return nums.map((num, index) => {
         const value = num + (index + 1);
         return value % 10;
@@ -51,3 +51,9 @@ console.log(incrementer([1, 2, 3]));
 console.log(incrementer([4, 6, 7, 1, 3]));
 console.log(incrementer([3, 6, 9, 8, 9]));
 console.log(incrementer([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 8]));
+
+console.log(incrementer2([]));
+console.log(incrementer2([1, 2, 3]));
+console.log(incrementer2([4, 6, 7, 1, 3]));
+console.log(incrementer2([3, 6, 9, 8, 9]));
+console.log(incrementer2([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 8]));
