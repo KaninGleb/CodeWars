@@ -22,6 +22,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const add = (...num) => {
     let result = 0;
 
@@ -31,4 +32,19 @@ const add = (...num) => {
     return result;
 }
 
+
+// OPTION 2
+const add2 = (...num) => {
+    let result = 0;
+
+    num.forEach((item, i) => {
+        result += (num[i] * (i + 1));
+    })
+
+    return result;
+}
+
+
+// ✅ Checking
 console.log(add(100, 200, 300));
+console.log(add2(100, 200, 300));
