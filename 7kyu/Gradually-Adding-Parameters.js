@@ -45,6 +45,11 @@ const add2 = (...num) => {
 }
 
 
+// OPTION 3
+const add3 = (...num) => num.reduce((sum, val, index) => sum + val * (index + 1));
+
+
 // ✅ Checking
 console.log(add(100, 200, 300));
 console.log(add2(100, 200, 300));
+console.log(add3(100, 200, 300));
