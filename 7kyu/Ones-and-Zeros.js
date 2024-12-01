@@ -35,7 +35,7 @@ const binaryArrayToNumber = arr => {
 
 
 // OPTION 2
-const binaryArrayToNumber = arr => {
+const binaryArrayToNumber2 = arr => {
     let result = 0;
 
     arr.forEach(arr => {
@@ -51,3 +51,8 @@ console.log(binaryArrayToNumber([0, 0, 0, 1]));
 console.log(binaryArrayToNumber([0, 0, 1, 0]));
 console.log(binaryArrayToNumber([1, 1, 1, 1]));
 console.log(binaryArrayToNumber([0, 1, 1, 0]));
+console.log();
+console.log(binaryArrayToNumber2([0, 0, 0, 1]));
+console.log(binaryArrayToNumber2([0, 0, 1, 0]));
+console.log(binaryArrayToNumber2([1, 1, 1, 1]));
+console.log(binaryArrayToNumber2([0, 1, 1, 0]));
