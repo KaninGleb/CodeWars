@@ -35,6 +35,7 @@ const fixedCases = [
 
 
 // ✅ SOLUTION
+// OPTION 1
 const sumNoDuplicates = numList => {
     const uniqueValues = {};
     const duplicateValues  = {};
@@ -56,7 +57,14 @@ const sumNoDuplicates = numList => {
 }
 
 
+// OPTION 2
+const sumNoDuplicates2 = numList => {
+    return numList.reduce((a, b) => numList.indexOf(b) === numList.lastIndexOf(b) ? a + b : a, 0);
+}
+
+
 // ✅ Checking
 fixedCases.forEach(([input, expected]) => {
     console.log(sumNoDuplicates(input) === expected);
+    console.log(sumNoDuplicates2(input) === expected);
 });
