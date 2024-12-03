@@ -18,6 +18,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const oddOne = arr => {
     let oddIndex = -1;
 
@@ -33,8 +34,17 @@ const oddOne = arr => {
 }
 
 
+// OPTION 2
+const oddOne2 = arr => arr.findIndex(x => x % 2 !== 0);
+
+
 // ✅ Checking
 console.log(oddOne([2, 4, 6, 7, 10]));
 console.log(oddOne([2, 16, 98, 10, 13, 78]));
 console.log(oddOne([4, -8, 98, -12, -7, 90, 100]));
 console.log(oddOne([2, 4, 6, 8]));
+
+console.log(oddOne2([2, 4, 6, 7, 10]));
+console.log(oddOne2([2, 16, 98, 10, 13, 78]));
+console.log(oddOne2([4, -8, 98, -12, -7, 90, 100]));
+console.log(oddOne2([2, 4, 6, 8]));
