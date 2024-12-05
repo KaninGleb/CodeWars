@@ -72,6 +72,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const stepDown = (stair, width) => {
     let result = [];
 
@@ -82,8 +83,31 @@ const stepDown = (stair, width) => {
 }
 
 
+// OPTION 2
+const stepDown2 = (stair, width) => {
+    let result = [];
+
+    const recurse = curr => {
+        if (curr < 0) return;
+
+        result.push(curr);
+        recurse(curr - width);
+    }
+    if (width === 0) return [];
+
+    recurse(stair);
+
+    return result.reverse();
+}
+
+
 // ✅ Checking
 console.log(stepDown(10,1));
 console.log(stepDown(80,10));
 console.log(stepDown(49,10));
 console.log(stepDown(5,7));
+
+console.log(stepDown2(10,1));
+console.log(stepDown2(80,10));
+console.log(stepDown2(49,10));
+console.log(stepDown2(5,7));
