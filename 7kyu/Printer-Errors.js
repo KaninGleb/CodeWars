@@ -19,6 +19,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const printerError = (s) => {
     const totalLength = s.length;
 
@@ -27,7 +28,15 @@ const printerError = (s) => {
 }
 
 
+// OPTION 2
+const printerError2 = (s) =>  `${[...s].filter(err => err < 'a' || err > 'm').length}/${s.length}`;
+
+
 // ✅ Checking
 console.log(printerError("aaabbbbhaijjjm"));
 console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));
 console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"));
+
+console.log(printerError2("aaabbbbhaijjjm"));
+console.log(printerError2("aaaxbbbbyyhwawiwjjjwwm"));
+console.log(printerError2("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"));
