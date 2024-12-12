@@ -25,7 +25,13 @@ const number = array => {
 }
 
 
+// OPTION 2
+const number2 = array => array.map((line, index) => `${index + 1}: ${line}`);
+
 
 // ✅ Checking
 console.log(number([]));
 console.log(number(["a", "b", "c"]));
+
+console.log(number2([]));
+console.log(number2(["a", "b", "c"]));
