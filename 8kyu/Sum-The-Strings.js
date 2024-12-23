@@ -15,7 +15,13 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const sumStr = (a, b) => (Number(a) + Number(b)).toString();
+
+
+// OPTION 2
+const sumStr2 = (a, b) => (+a + +b).toString();
+
 
 
 // ✅ Checking
@@ -24,3 +30,9 @@ console.log(sumStr("34","5"));
 console.log(sumStr("", ""));
 console.log(sumStr("2", ""));
 console.log(sumStr("-5", "3"));
+
+console.log(sumStr2("4","5"));
+console.log(sumStr2("34","5"));
+console.log(sumStr2("", ""));
+console.log(sumStr2("2", ""));
+console.log(sumStr2("-5", "3"));
