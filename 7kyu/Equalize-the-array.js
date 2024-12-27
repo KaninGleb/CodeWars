@@ -11,6 +11,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const equalize = arr => {
     const result = [];
     if (arr.length === 0) return result;
@@ -26,7 +27,24 @@ const equalize = arr => {
 }
 
 
+// OPTION 2
+const equalize2 = arr => {
+    const result = [];
+    const firstElement = arr[0];
+
+    for (const el of arr) {
+        const difference = el - firstElement;
+        result.push(difference >= 0 ? `+${difference}` : `-${-difference}`);
+    }
+    return result;
+}
+
+
 // ✅ Checking
 console.log(equalize([20, 30, 35, 10]));
 console.log(equalize([]));
 console.log(equalize([10, 12, 24, 50, 0, 15, 20]));
+
+console.log(equalize2([20, 30, 35, 10]));
+console.log(equalize2([]));
+console.log(equalize2([10, 12, 24, 50, 0, 15, 20]));
