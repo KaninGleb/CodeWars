@@ -16,7 +16,38 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const positiveSum = arr => arr.filter(el => el > 0).reduce((a, b) => a + b, 0);
+
+
+// OPTION 2
+const positiveSum2 = arr => {
+    const positives = []
+    let result = 0;
+
+    for (const el of arr) {
+        if (el > 0) {
+            positives.push(el);
+        }
+    }
+
+    for (const num of positives) {
+        result += num;
+    }
+    return result;
+}
+
+
+// OPTION 3
+const positiveSum3 = arr => {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            sum += arr[i];
+        }
+    }
+    return sum;
+}
 
 
 // ✅ Checking
@@ -25,3 +56,15 @@ console.log(positiveSum([1, -2, 3, 4, 5]));
 console.log(positiveSum([]));
 console.log(positiveSum([-1, -2, -3, -4, -5]));
 console.log(positiveSum([-1, 2, 3, 4, -5]));
+
+console.log(positiveSum2([1, 2, 3, 4, 5]));
+console.log(positiveSum2([1, -2, 3, 4, 5]));
+console.log(positiveSum2([]));
+console.log(positiveSum2([-1, -2, -3, -4, -5]));
+console.log(positiveSum2([-1, 2, 3, 4, -5]));
+
+console.log(positiveSum3([1, 2, 3, 4, 5]));
+console.log(positiveSum3([1, -2, 3, 4, 5]));
+console.log(positiveSum3([]));
+console.log(positiveSum3([-1, -2, -3, -4, -5]));
+console.log(positiveSum3([-1, 2, 3, 4, -5]));
