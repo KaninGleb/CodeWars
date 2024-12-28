@@ -19,7 +19,16 @@
 
 
 // ✅ SOLUTION
-const Ball = function(ballType) {
+// OPTION 1
+class Ball {
+    constructor (ballType = 'regular') {
+        this.ballType = ballType;
+    }
+}
+
+
+// OPTION 2
+const Ball2 = function(ballType) {
     this.ballType = ballType || 'regular';
 }
 
@@ -27,3 +36,6 @@ const Ball = function(ballType) {
 // ✅ Checking
 console.log(new Ball().ballType);
 console.log(new Ball("super").ballType);
+
+console.log(new Ball2().ballType);
+console.log(new Ball2("super").ballType);
