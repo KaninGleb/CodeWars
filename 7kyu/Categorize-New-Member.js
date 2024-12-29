@@ -21,6 +21,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const openOrSenior = data => {
     const result = [];
     for (let i = 0; i < data.length; i++) {
@@ -32,7 +33,20 @@ const openOrSenior = data => {
 }
 
 
+// OPTION 2
+const openOrSenior2 = data => {
+    return data.map(member => {
+        const [age, handicap] = member;
+        return (age >= 55 && handicap > 7) ? 'Senior' : 'Open';
+    })
+}
+
+
 // ✅ Checking
 console.log(openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]]));
 console.log(openOrSenior([[3, 12], [55, 1], [91, -2], [53, 23]]));
 console.log(openOrSenior([[59, 12], [55, -1], [12, -2], [12, 12]]));
+
+console.log(openOrSenior2([[45, 12], [55, 21], [19, -2], [104, 20]]));
+console.log(openOrSenior2([[3, 12], [55, 1], [91, -2], [53, 23]]));
+console.log(openOrSenior2([[59, 12], [55, -1], [12, -2], [12, 12]]));
