@@ -24,6 +24,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function getRealFloor(n: number) {
     if (n === 0) {
         return 0;
@@ -39,7 +40,21 @@ export function getRealFloor(n: number) {
 }
 
 
+// OPTION 2
+const getRealFloor2 = (n: number) => {
+    return  n === 0 ? 0
+        : n === 1 ? 0
+        : (n > 1 && n < 13) ? n - 1
+        : (n >= 13) ? n - 2
+        : n
+}
+
+
 // ✅ Checking
 console.log(getRealFloor(1));
 console.log(getRealFloor(5));
 console.log(getRealFloor(15));
+
+console.log(getRealFloor2(1));
+console.log(getRealFloor2(5));
+console.log(getRealFloor2(15));
