@@ -32,6 +32,23 @@ export function multiTable(n: number): string {
 }
 
 
+// OPTION 2
+export function multiTable2(n: number): string {
+    let result: string = '';
+
+    for (let i = 1; i <= 10; i++) {
+        result += `${i} * ${n} = ${i * n}`;
+        if (i < 10) {
+            result += '\n'
+        }
+    }
+    return result;
+}
+
+
 // ✅ Checking
 console.log(multiTable(5));
 console.log(multiTable(1));
+
+console.log(multiTable2(5));
+console.log(multiTable2(1));
