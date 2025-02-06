@@ -62,6 +62,14 @@ export function lineupStudents2 (students: string): string[] {
 }
 
 
+// OPTION 3
+export function lineupStudents3 (students: string): string[] {
+    return students.split(' ').sort((a, b) => {
+        return b.length - a.length || b.localeCompare(a);
+    })
+}
+
+
 // ✅ Checking
 function arraysEqual (arr1: string[], arr2: string[]) {
     return arr1.every((value, index) => value === arr2[index]);
@@ -72,3 +80,6 @@ console.log(arraysEqual(lineupStudents(s2), lst2));
 
 console.log(arraysEqual(lineupStudents2(s1), lst1));
 console.log(arraysEqual(lineupStudents2(s2), lst2));
+
+console.log(arraysEqual(lineupStudents3(s1), lst1));
+console.log(arraysEqual(lineupStudents3(s2), lst2));
