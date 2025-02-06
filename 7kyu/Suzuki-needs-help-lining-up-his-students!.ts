@@ -38,7 +38,8 @@ let lst2 = ['Yoshimitsu', 'Yoshiyuki', 'Yoshinori', 'Yoshikazu', 'Yoshihiro', 'T
 
 
 // ✅ SOLUTION
-export function lineupStudents(students: string): string[] {
+// OPTION 1
+export function lineupStudents (students: string): string[] {
     return students.split(' ').sort((a, b) => {
         const lengthDifference = b.length - a.length;
         if (lengthDifference !== 0) {
@@ -49,8 +50,25 @@ export function lineupStudents(students: string): string[] {
 }
 
 
+// OPTION 2
+export function lineupStudents2 (students: string): string[] {
+    return students.split(' ').sort((a, b) => {
+        const lengthDifference = b.length - a.length;
+        if (lengthDifference !== 0) {
+            return lengthDifference;
+        }
+        return b.localeCompare(a);
+    });
+}
+
+
 // ✅ Checking
-console.log(lineupStudents(s1))
-// console.log(lineupStudents(s2))
-console.log(lineupStudents(s1) === lst1)
-console.log(lineupStudents(s2) === lst2)
+function arraysEqual (arr1: string[], arr2: string[]) {
+    return arr1.every((value, index) => value === arr2[index]);
+}
+
+console.log(arraysEqual(lineupStudents(s1), lst1));
+console.log(arraysEqual(lineupStudents(s2), lst2));
+
+console.log(arraysEqual(lineupStudents2(s1), lst1));
+console.log(arraysEqual(lineupStudents2(s2), lst2));
