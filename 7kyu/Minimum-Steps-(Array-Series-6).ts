@@ -23,6 +23,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function minimumSteps(nums: number[], value: number) {
     nums.sort((a, b) => a - b);
 
@@ -39,9 +40,28 @@ export function minimumSteps(nums: number[], value: number) {
 }
 
 
+// OPTION 2
+export function minimumSteps2(nums: number[], value: number): number {
+    let arr: number[] = nums.sort((a, b) => a - b)
+    let i: number = 0, n: number = arr[i]
+
+    while(n < value){
+        i++
+        n += arr[i]
+    }
+    return i
+}
+
+
 // ✅ Checking
 console.log(minimumSteps([4, 6, 3], 7), '--- 1');
 console.log(minimumSteps([10, 9, 9, 8], 17), '--- 1');
 console.log(minimumSteps([8, 9, 10, 4, 2], 23), '--- 3');
 console.log(minimumSteps([19, 98, 69, 28, 75, 45, 17, 98, 67], 464), '--- 8');
 console.log(minimumSteps([4, 6, 3], 2), '--- 0');
+
+console.log(minimumSteps2([4, 6, 3], 7), '--- 1');
+console.log(minimumSteps2([10, 9, 9, 8], 17), '--- 1');
+console.log(minimumSteps2([8, 9, 10, 4, 2], 23), '--- 3');
+console.log(minimumSteps2([19, 98, 69, 28, 75, 45, 17, 98, 67], 464), '--- 8');
+console.log(minimumSteps2([4, 6, 3], 2), '--- 0');
