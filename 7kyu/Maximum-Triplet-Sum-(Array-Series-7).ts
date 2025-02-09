@@ -30,10 +30,20 @@
 
 
 // ✅ SOLUTION
-export function maxTriSum(nums: number[]): number  {
+// OPTION 1
+export function maxTriSum(nums: number[]): number {
     const uniqueNumbers = Array.from(new Set(nums));
     uniqueNumbers.sort((a, b) => b - a)
     return uniqueNumbers[0] + uniqueNumbers[1] + uniqueNumbers[2];
+}
+
+
+// OPTION 2
+export const maxTriSum2 = (nums: number[]): number => {
+    return Array.from(new Set(nums))
+                .sort((a, b) => b - a)
+                .slice(0, 3)
+                .reduce((a, b) => a + b, 0)
 }
 
 
@@ -48,3 +58,14 @@ console.log(maxTriSum([-7, 12, -7, 29, -5, 0, -7, 0, 0, 29]));
 console.log(maxTriSum([-2, 0, 2]));
 console.log(maxTriSum([-2, -4, 0, -9, 2]));
 console.log(maxTriSum([-5, -1, -9, 0, 2]));
+
+console.log(maxTriSum2([3, 2, 6, 8, 2, 3]));
+console.log(maxTriSum2([2, 9, 13, 10, 5, 2, 9, 5]));
+console.log(maxTriSum2([2, 1, 8, 0, 6, 4, 8, 6, 2, 4]));
+console.log(maxTriSum2([-3, -27, -4, -2, -27, -2]));
+console.log(maxTriSum2([-14, -12, -7, -42, -809, -14, -12]));
+console.log(maxTriSum2([-13, -50, 57, 13, 67, -13, 57, 108, 67]));
+console.log(maxTriSum2([-7, 12, -7, 29, -5, 0, -7, 0, 0, 29]));
+console.log(maxTriSum2([-2, 0, 2]));
+console.log(maxTriSum2([-2, -4, 0, -9, 2]));
+console.log(maxTriSum2([-5, -1, -9, 0, 2]));
