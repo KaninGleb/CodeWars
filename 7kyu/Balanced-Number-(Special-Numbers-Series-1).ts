@@ -28,6 +28,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function balancedNum(num: number): string {
     const numStr = num.toString();
     const len = numStr.length;
@@ -55,6 +56,20 @@ export function balancedNum(num: number): string {
 }
 
 
+// OPTION 2
+export const balancedNum2 = (num: number): "Balanced" | "Not Balanced" => {
+    const nums = (num + '').split('').map(Number);
+    const len = nums.length;
+
+    const left = nums.slice(0, Math.floor(len / 2 - 0.5));
+    const right = nums.slice(Math.ceil(len / 2 + 0.5));
+
+    return left.reduce((a, b) => a + b, 0) === right.reduce((a, b) => a + b, 0)
+        ? 'Balanced'
+        : 'Not Balanced';
+}
+
+
 // ✅ Checking
 console.log(balancedNum(7));
 console.log(balancedNum(959));
@@ -66,3 +81,14 @@ console.log(balancedNum(66545));
 console.log(balancedNum(295591));
 console.log(balancedNum(1230987));
 console.log(balancedNum(56239814));
+
+console.log(balancedNum2(7));
+console.log(balancedNum2(959));
+console.log(balancedNum2(13));
+console.log(balancedNum2(432));
+console.log(balancedNum2(424));
+console.log(balancedNum2(1024));
+console.log(balancedNum2(66545));
+console.log(balancedNum2(295591));
+console.log(balancedNum2(1230987));
+console.log(balancedNum2(56239814));
