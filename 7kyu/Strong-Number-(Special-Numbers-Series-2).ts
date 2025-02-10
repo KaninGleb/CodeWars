@@ -23,6 +23,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 function factorial (n: number): number {
     return n ? n * factorial(n - 1) : 1;
 }
@@ -35,6 +36,19 @@ export const strongNumber = (num: number): string => {
 }
 
 
+// OPTION 2
+export const strongNumber2 = (num: number): string => {
+    function factorial2 (n: number): number {
+        return n ? n * factorial2(n - 1) : 1;
+    }
+
+    const numStr = (num + "").split('').map(Number);
+    const strongCheck = num === numStr.reduce((a, b) => a + factorial2(b), 0)
+
+    return strongCheck ? 'STRONG!!!!' : 'Not Strong !!';
+}
+
+
 // ✅ Checking
 console.log(strongNumber(1) === 'STRONG!!!!');
 console.log(strongNumber(2) === 'STRONG!!!!');
@@ -42,3 +56,10 @@ console.log(strongNumber(145) === 'STRONG!!!!');
 console.log(strongNumber(7) === 'Not Strong !!');
 console.log(strongNumber(93) === 'Not Strong !!');
 console.log(strongNumber(185) === 'Not Strong !!');
+
+console.log(strongNumber2(1) === 'STRONG!!!!');
+console.log(strongNumber2(2) === 'STRONG!!!!');
+console.log(strongNumber2(145) === 'STRONG!!!!');
+console.log(strongNumber2(7) === 'Not Strong !!');
+console.log(strongNumber2(93) === 'Not Strong !!');
+console.log(strongNumber2(185) === 'Not Strong !!');
