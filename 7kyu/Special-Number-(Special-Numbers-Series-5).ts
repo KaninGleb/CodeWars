@@ -57,6 +57,13 @@ export function specialNumber2 (n: number) {
 }
 
 
+// OPTION 3
+export function specialNumber3 (n: number): string {
+    const isSpecial = /^[0-5]+$/.test(n.toString());
+    return isSpecial ? "Special!!" : "NOT!!";
+}
+
+
 // ✅ Checking
 console.log(specialNumber(2) === "Special!!");
 console.log(specialNumber(3) === "Special!!");
@@ -67,3 +74,8 @@ console.log(specialNumber2(2) === "Special!!");
 console.log(specialNumber2(3) === "Special!!");
 console.log(specialNumber2(6) === "NOT!!");
 console.log(specialNumber2(9) === "NOT!!");
+
+console.log(specialNumber3(2) === "Special!!");
+console.log(specialNumber3(3) === "Special!!");
+console.log(specialNumber3(6) === "NOT!!");
+console.log(specialNumber3(9) === "NOT!!");
