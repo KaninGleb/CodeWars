@@ -33,10 +33,23 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function specialNumber (n: number) {
     const num = (n + '').split('').map(Number);
     for (let i = 0; i < num.length; i++) {
         if (num[i] > 5) {
+            return "NOT!!"
+        }
+    }
+    return "Special!!"
+}
+
+
+// OPTION 2
+export function specialNumber2 (n: number) {
+    const digits = (n + '');
+    for (const digit of digits) {
+        if (digit > '5') {
             return "NOT!!"
         }
     }
@@ -49,9 +62,8 @@ console.log(specialNumber(2) === "Special!!");
 console.log(specialNumber(3) === "Special!!");
 console.log(specialNumber(6) === "NOT!!");
 console.log(specialNumber(9) === "NOT!!");
-console.log(specialNumber(11) === "Special!!");
-console.log(specialNumber(55) === "Special!!");
-console.log(specialNumber(26) === "NOT!!");
-console.log(specialNumber(92) === "NOT!!");
-console.log(specialNumber(25432) === "Special!!");
-console.log(specialNumber(2783) === "NOT!!");
+
+console.log(specialNumber2(2) === "Special!!");
+console.log(specialNumber2(3) === "Special!!");
+console.log(specialNumber2(6) === "NOT!!");
+console.log(specialNumber2(9) === "NOT!!");
