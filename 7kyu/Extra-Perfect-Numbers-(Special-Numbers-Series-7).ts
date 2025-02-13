@@ -34,6 +34,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function extraPerfect(n: number) {
     const result = [];
 
@@ -46,9 +47,21 @@ export function extraPerfect(n: number) {
 }
 
 
+// OPTION 2
+export function extraPerfect2 (n: number) {
+    return [...new Array(n + 1).keys()].filter(x => x % 2 === 1);
+}
+
+
 // ✅ Checking
 console.log(extraPerfect(3));
 console.log(extraPerfect(5));
 console.log(extraPerfect(7));
 console.log(extraPerfect(28));
 console.log(extraPerfect(39));
+
+console.log(extraPerfect2(3));
+console.log(extraPerfect2(5));
+console.log(extraPerfect2(7));
+console.log(extraPerfect2(28));
+console.log(extraPerfect2(39));
