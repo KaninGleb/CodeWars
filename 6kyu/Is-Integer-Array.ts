@@ -26,6 +26,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const isIntArray = (arr: any) => {
     if (!Array.isArray(arr)) return false;
 
@@ -36,6 +37,14 @@ const isIntArray = (arr: any) => {
         Number.isFinite(num) &&
         Math.floor(num) === num
     )
+}
+
+
+// OPTION 2
+const check = (x: any): boolean => Math.floor(x) === x;
+
+const isIntArray2 = (arr: any): boolean => {
+    return Array.isArray(arr) && arr.every(check);
 }
 
 
@@ -57,3 +66,21 @@ console.log(isIntArray([1.0, 2.0, 3.0001]), '--- false');
 console.log(isIntArray(['-1']), '--- false');
 console.log(isIntArray([1.23e-7, 2]), '--- false');
 console.log(isIntArray([1.2, 1.8, 3]), '--- false');
+console.log()
+console.log(isIntArray2([]), '--- true');
+console.log(isIntArray2([1, 2, 3, 4]), '--- true');
+console.log(isIntArray2([-11, -12, -13, -14]), '--- true');
+console.log(isIntArray2([1.0, 2.0, 3.0]), '--- true');
+console.log(isIntArray2([1, 2, NaN]), '--- false');
+console.log(isIntArray2(true), '--- false');
+console.log(isIntArray2(null), '--- false');
+console.log(isIntArray2(undefined), '--- false');
+console.log(isIntArray2(NaN), '--- false');
+console.log(isIntArray2(''), '--- false');
+console.log(isIntArray2([null]), '--- false');
+console.log(isIntArray2([undefined]), '--- false');
+console.log(isIntArray2([NaN]), '--- false');
+console.log(isIntArray2([1.0, 2.0, 3.0001]), '--- false');
+console.log(isIntArray2(['-1']), '--- false');
+console.log(isIntArray2([1.23e-7, 2]), '--- false');
+console.log(isIntArray2([1.2, 1.8, 3]), '--- false');
