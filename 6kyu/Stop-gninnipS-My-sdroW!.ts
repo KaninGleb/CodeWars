@@ -18,6 +18,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function spinWords(words: string): string {
     const splited = words.split(' ');
     const result = [];
@@ -33,6 +34,16 @@ export function spinWords(words: string): string {
 }
 
 
+// OPTION 2
+export function spinWords2(words: string): string {
+    return words.split(' ')
+                .map(m => m.length >= 5
+                        ? m.split('').reverse().join('')
+                        : m)
+                .join(' ')
+}
+
+
 // ✅ Checking
 console.log(spinWords("Welcome") === "emocleW");
 console.log(spinWords("Hey fellow warriors") === "Hey wollef sroirraw");
@@ -41,3 +52,11 @@ console.log(spinWords("This is another test") === "This is rehtona test");
 console.log(spinWords("You are almost to the last test") === "You are tsomla to the last test");
 console.log(spinWords("Just kidding there is still one more") === "Just gniddik ereht is llits one more");
 console.log(spinWords("Seriously this is the last one") === "ylsuoireS this is the last one");
+
+console.log(spinWords2("Welcome") === "emocleW");
+console.log(spinWords2("Hey fellow warriors") === "Hey wollef sroirraw");
+console.log(spinWords2("This is a test") === "This is a test");
+console.log(spinWords2("This is another test") === "This is rehtona test");
+console.log(spinWords2("You are almost to the last test") === "You are tsomla to the last test");
+console.log(spinWords2("Just kidding there is still one more") === "Just gniddik ereht is llits one more");
+console.log(spinWords2("Seriously this is the last one") === "ylsuoireS this is the last one");
