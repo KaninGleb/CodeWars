@@ -24,6 +24,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function strictEqual (num: number) {
     if (num === 0) return 0;
 
@@ -36,5 +37,25 @@ export function strictEqual (num: number) {
     return sum;
 }
 
+
+// OPTION 2
+export class Challenge {
+    static solution(number: number) {
+        if (number === 0) return 0;
+
+        let sum = 0;
+        for (let i = 0; i < number; i++) {
+            if (i % 3 === 0 || i % 5 === 0) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+}
+
+
 // ✅ Checking
-console.log(strictEqual(10), '--- 23')
+console.log(strictEqual(10), '--- 23');
+console.log(strictEqual(1000), '--- 233168');
+console.log(Challenge.solution(10), '--- 23')
+console.log(Challenge.solution(1000), '--- 233168')
