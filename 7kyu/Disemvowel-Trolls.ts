@@ -16,11 +16,28 @@
 
 // ✅ SOLUTION
 export class Kata {
+    // OPTION 1
     static disemvowel(str: string): string {
         return str.replace(/[aeiouAEIOU]/g, '');
+    }
+
+    // OPTION 2
+    static disemvowel2(str: string): string {
+        return str.replace(/[aeiou]/gi, '');
+    }
+
+    // OPTION 3
+    static disemvowel3(str: string): string {
+        const vowels = ['a', 'e', 'i', 'o', 'u'];
+        return str
+            .split('')
+            .map(l => vowels.includes(l.toLowerCase()) ? '' : l)
+            .join('');
     }
 }
 
 
 // ✅ Checking
 console.log(Kata.disemvowel("This website is for losers LOL!"), " --- Ths wbst s fr lsrs LL!");
+console.log(Kata.disemvowel2("This website is for losers LOL!"), " --- Ths wbst s fr lsrs LL!");
+console.log(Kata.disemvowel3("This website is for losers LOL!"), " --- Ths wbst s fr lsrs LL!");
