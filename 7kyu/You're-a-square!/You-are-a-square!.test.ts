@@ -8,4 +8,8 @@ test('You\'re a square!', () => {
     expect(isSquare( 4)).to.be.true;
     expect(isSquare(25)).to.be.true;
     expect(isSquare(26)).to.be.false;
+    expect(isSquare(16)).to.be.true;
+    expect(isSquare(15)).to.be.false;
+    expect(isSquare(0.1)).to.be.false;
+    expect(isSquare(0.5)).to.be.false;
 })

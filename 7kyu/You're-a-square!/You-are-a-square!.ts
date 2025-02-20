@@ -32,5 +32,5 @@
 // ✅ SOLUTION
 export function isSquare(n: number): boolean {
     const square = Math.sqrt(n);
-    return square * square === n;
+    return Number.isInteger(square);
 }
