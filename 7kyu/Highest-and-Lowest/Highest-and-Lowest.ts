@@ -18,10 +18,17 @@
 
 // ✅ SOLUTION
 export class Kata {
+    // Option 1
     static highAndLow(numbers: string): string {
         const splitted = numbers.split(' ').map(Number);
         const highest = Math.max(...splitted);
         const lowest = Math.min(...splitted);
         return `${highest} ${lowest}`;
+    }
+
+    // Option 2
+    static highAndLow2(numbers: string): string {
+        const splitted = numbers.split(' ').map(Number);
+        return `${Math.max(...splitted)} ${Math.min(...splitted)}`;
     }
 }
