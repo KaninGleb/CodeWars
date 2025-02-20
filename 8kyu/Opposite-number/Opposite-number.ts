@@ -17,7 +17,3 @@ export class Kata {
         return -n;
     }
 }
-
-
-// ✅ Checking
-console.log(Kata.opposite(1), -1)
