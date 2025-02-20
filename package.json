@@ -1,8 +1,12 @@
 {
 	"devDependencies": {
-		"typescript": "^5.7.3"
+		"@vitest/ui": "^3.0.6",
+		"typescript": "^5.7.3",
+		"vitest": "^3.0.6"
 	},
 	"scripts": {
+		"test": "vitest",
+		"test:ui": "vitest --ui",
 		"build": "tsc --watch",
 		"start": "node example.js"
 	}
