@@ -15,7 +15,14 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function sumTwoSmallestNumbers(nums: Array<number>): number {
     const sorted = nums.sort((a, b) => a - b);
     return sorted[0] + sorted[1];
+}
+
+// OPTION 2
+export function sumTwoSmallestNumbers2(nums: Array<number>): number {
+    const [first, second] = [...nums].sort((a, b) => a - b);
+    return first + second;
 }
