@@ -13,10 +13,20 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function countBits(n: number): number {
     return n
         .toString(2)
         .split('')
         .map(Number)
         .reduce((a, b) => a + b);
+}
+
+
+// OPTION 2
+export function countBits2(n: number): number {
+    return n
+        .toString(2)
+        .split('')
+        .filter(n => n === '1').length
 }
