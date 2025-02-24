@@ -32,14 +32,14 @@ export function countBits2(n: number): number {
 }
 
 
-// OPTION 3 - Upgraded Option 2
+// OPTION 3 - similar to Option 2
 export function countBits3(n: number): number {
     return n
         .toString(2)
         .split('')
+        .map(Number)
         .filter(Boolean).length
 }
-
 
 // OPTION 4
 export function countBits4(n: number): number {
