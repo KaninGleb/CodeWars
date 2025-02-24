@@ -30,3 +30,20 @@ export function countBits2(n: number): number {
         .split('')
         .filter(n => n === '1').length
 }
+
+
+// OPTION 3 - Upgraded Option 2
+export function countBits3(n: number): number {
+    return n
+        .toString(2)
+        .split('')
+        .filter(Boolean).length
+}
+
+
+// OPTION 4
+export function countBits4(n: number): number {
+    return n
+        .toString(2)
+        .replace(/0/g, '').length
+}
