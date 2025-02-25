@@ -15,6 +15,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function findOutlier(integers: number[]) {
     const oddCounter = integers.filter(n => n % 2 === 0).length;
 
@@ -28,5 +29,17 @@ export function findOutlier(integers: number[]) {
         if (output !== undefined) {
             return output;
         }
+    }
+}
+
+
+// OPTION 2 - with Non-null assertion operator (!)
+export function findOutlier2(integers: number[]): number {
+    const oddCounter = integers.filter(n => n % 2 === 0).length;
+
+    if (oddCounter > 1) {
+        return integers.find(n => n % 2 !== 0)!;
+    } else {
+        return integers.find(n => n % 2 === 0)!;
     }
 }
