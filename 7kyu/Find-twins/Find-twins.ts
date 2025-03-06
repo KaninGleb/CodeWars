@@ -17,6 +17,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function elimination(arr: number[]): number | null{
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
@@ -24,6 +25,19 @@ export function elimination(arr: number[]): number | null{
                 return arr[i];
             }
         }
+    }
+    return null;
+}
+
+
+// OPTION 2
+export function elimination2(arr: number[]): number | null{
+    const uniqueSet = new Set();
+    for (const num of arr) {
+        if (uniqueSet.has(num)) {
+            return num;
+        }
+        uniqueSet.add(num);
     }
     return null;
 }
