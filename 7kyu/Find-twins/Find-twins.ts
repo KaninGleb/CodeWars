@@ -41,3 +41,12 @@ export function elimination2(arr: number[]): number | null{
     }
     return null;
 }
+
+
+// OPTION 3
+export function elimination3(arr: number[]): number | null{
+    for (let num of arr) {
+        if (arr.indexOf(num) !== arr.lastIndexOf(num)) return num;
+    }
+    return null;
+}
