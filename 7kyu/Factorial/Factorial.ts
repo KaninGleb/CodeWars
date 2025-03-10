@@ -13,6 +13,10 @@
 
 // ✅ SOLUTION
 export function factorial (n: number): number {
+    if (n < 0 || n > 12) {
+        throw new RangeError('Input must be between 0 and 12.');
+    }
+
     let result = 1;
     for (let i = 1; i <= n; i++) {
         result *= i;

@@ -16,4 +16,7 @@ test('Factorial', () => {
     expect(factorial(10)).toBe(3628800);
     expect(factorial(11)).toBe(39916800);
     expect(factorial(12)).toBe(479001600);
+
+    expect(() => factorial(-1)).toThrow(RangeError);
+    expect(() => factorial(13)).toThrow(RangeError);
 })
