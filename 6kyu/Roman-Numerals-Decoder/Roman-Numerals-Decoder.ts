@@ -32,7 +32,8 @@
 
 
 // ✅ SOLUTION
-export function solution(roman: string): number {
+// OPTION 1
+export function solution (roman: string): number {
     const numerals: { [key: string]: number } = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
 
     let total = 0;
@@ -49,4 +50,19 @@ export function solution(roman: string): number {
         prevValue = currValue;
     }
     return total;
+}
+
+
+// OPTION 2
+export function solution2 (roman: string): number {
+    const numerals: { [key: string]: number } = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+    return roman
+        .split('')
+        .map(n => numerals[n])
+        .reduce((total, currentValue, i, arr) => {
+            if (currentValue < (arr[i + 1] || 0)) {
+                return total - currentValue;
+            }
+            return total + currentValue;
+        }, 0);
 }
