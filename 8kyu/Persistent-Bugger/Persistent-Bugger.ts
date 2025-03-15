@@ -15,12 +15,13 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function persistence(num: number): number {
     const multiply = (num: number) => {
         return num
             .toString()
             .split('')
-            .reduce((a, b) => +a * +b, 1);
+            .reduce((a, b) => a * +b, 1);
     }
 
     let count = 0;
@@ -30,5 +31,20 @@ export function persistence(num: number): number {
         count++;
     }
 
+    return count;
+}
+
+
+// OPTION 2
+export function persistence2(num: number): number {
+    let count = 0;
+
+    while (num > 9) {
+        num = num
+            .toString()
+            .split('')
+            .reduce((a, b) => a * Number(b), 1);
+        count++;
+    }
     return count;
 }
