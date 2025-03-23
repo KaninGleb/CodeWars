@@ -16,6 +16,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export const longestWord = (stringOfWords: string): string => {
     const words = stringOfWords.split(' ');
     let longest = '';
@@ -26,4 +27,9 @@ export const longestWord = (stringOfWords: string): string => {
         }
     }
     return longest;
+}
+
+// OPTION 2
+export const longestWord2 = (str: string): string => {
+    return str.split(' ').sort((a, b) => a.length - b.length).pop() || '';
 }
