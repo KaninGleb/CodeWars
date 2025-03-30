@@ -81,6 +81,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 const howManySmaller = (arr: Array<number>, n: number): number => {
   const fixedArr = arr.map(n => n.toFixed(2));
   const result = [];
@@ -93,7 +94,17 @@ const howManySmaller = (arr: Array<number>, n: number): number => {
 }
 
 
+// OPTION 2
+const howManySmaller2 = (arr: Array<number>, n: number): number => {
+  return arr.filter(x => +x.toFixed(2) < n).length
+}
+
+
 // ✅ Checking
 console.log(howManySmaller([1.234, 1.235, 1.228], 1.24), '--- 2');
 console.log(howManySmaller([1.1888, 1.1868, 1.1838], 1.19), '--- 1');
 console.log(howManySmaller([3.1288, 3.1212, 3.1205], 3.1212), '--- 2');
+
+console.log(howManySmaller2([1.234, 1.235, 1.228], 1.24), '--- 2');
+console.log(howManySmaller2([1.1888, 1.1868, 1.1838], 1.19), '--- 1');
+console.log(howManySmaller2([3.1288, 3.1212, 3.1205], 3.1212), '--- 2');
