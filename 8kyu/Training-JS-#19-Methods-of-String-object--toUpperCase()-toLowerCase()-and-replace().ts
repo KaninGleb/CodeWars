@@ -114,6 +114,20 @@ function alienLanguage (str: string): string {
 const alienLanguage2 = (str: string) => str.toUpperCase().replace(/\w\b/g, m => m.toLowerCase());
 
 
+// OPTION 3
+const alienLanguage3 = (str: string) => {
+  let words = str.split(' ');
+
+  const transformedWords = words.map(word => {
+    if (word.length > 0) {
+      return word.slice(0, -1).toUpperCase() + word.charAt(word.length - 1).toLowerCase();
+    }
+    return word;
+  })
+  return transformedWords.join(' ');
+}
+
+
 // ✅ Checking
 console.log(alienLanguage("My name is John"), "--- My NAMe Is JOHn");
 console.log(alienLanguage("this is an example"), "--- THIs Is An EXAMPLe");
@@ -124,3 +138,8 @@ console.log(alienLanguage2("My name is John") === "My NAMe Is JOHn");
 console.log(alienLanguage2("this is an example") === "THIs Is An EXAMPLe");
 console.log(alienLanguage2("Hello World") === "HELLo WORLd");
 console.log(alienLanguage2("HELLO WORLD") === "HELLo WORLd");
+
+console.log(alienLanguage3("My name is John") === "My NAMe Is JOHn");
+console.log(alienLanguage3("this is an example") === "THIs Is An EXAMPLe");
+console.log(alienLanguage3("Hello World") === "HELLo WORLd");
+console.log(alienLanguage3("HELLO WORLD") === "HELLo WORLd");
