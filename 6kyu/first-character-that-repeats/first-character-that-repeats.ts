@@ -44,3 +44,9 @@ export const firstDup2 = (s: string): string | undefined =>  {
     if (s.lastIndexOf(s[i]) !== i) return s[i];
   }
 }
+
+
+// OPTION 3
+export const firstDup3 = (s: string): string | undefined =>  {
+  return s.split('').find((l, i) => s.lastIndexOf(l) > i);
+}
