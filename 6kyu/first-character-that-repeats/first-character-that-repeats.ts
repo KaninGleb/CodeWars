@@ -25,15 +25,22 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export const firstDup = (s: string): string | undefined =>  {
-  const str = s.split('');
+  for (let i = 0; i < s.length; i++) {
+    const first = s.indexOf(s[i]);
+    const second = s.lastIndexOf(s[i]);
 
-  for (let i = 0; i < str.length; i++) {
-    const first = str.indexOf(str[i]);
-    const second = str.lastIndexOf(str[i]);
     if (first !== second) {
-      console.log(str[i])
-      return str[i];
+      return s[i];
     }
+  }
+}
+
+
+// OPTION 2
+export const firstDup2 = (s: string): string | undefined =>  {
+  for (let i = 0; i < s.length; i++) {
+    if (s.lastIndexOf(s[i]) !== i) return s[i];
   }
 }
