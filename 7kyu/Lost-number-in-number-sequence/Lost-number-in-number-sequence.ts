@@ -34,3 +34,9 @@ export function findDeletedNumber2(arr: Array<number>, mixArr: Array<number>): n
   const mixArrSum = mixArr.reduce((a, b) => a + b, 0);
   return arrSum - mixArrSum;
 }
+
+
+// OPTION 3
+export function findDeletedNumber3(arr: Array<number>, mixArr: Array<number>): number {
+  return Number( arr.filter(v => mixArr.indexOf(v) === -1) ) || 0;
+}
