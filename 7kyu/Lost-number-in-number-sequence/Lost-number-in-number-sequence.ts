@@ -17,6 +17,7 @@
 
 
 // ✅ SOLUTION
+// OPTION 1
 export function findDeletedNumber(arr: Array<number>, mixArr: Array<number>): number {
   for (let i = 0; i < arr.length; i++) {
     if (!mixArr.includes(arr[i])) {
@@ -24,4 +25,12 @@ export function findDeletedNumber(arr: Array<number>, mixArr: Array<number>): nu
     }
   }
   return 0;
+}
+
+
+// OPTION 2
+export function findDeletedNumber2(arr: Array<number>, mixArr: Array<number>): number {
+  const arrSum = arr.reduce((a, b) => a + b, 0);
+  const mixArrSum = mixArr.reduce((a, b) => a + b, 0);
+  return arrSum - mixArrSum;
 }
