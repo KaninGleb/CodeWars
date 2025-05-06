@@ -23,4 +23,15 @@
 
 
 // ✅ SOLUTION
-export const updateArray = <T>(arr: T[], value: T): T[] => arr.includes(value) ? arr : [...arr, value]
+// OPTION 1 - Immutable
+export const updateArray1 = <T>(arr: T[], value: T): T[] => arr.includes(value) ? arr : [...arr, value]
+
+
+// OPTION 2 - Mutable
+export const updateArray2 = <T>(arr: T[], value: T): T[] => {
+  const index = arr.indexOf(value)
+  if (index === -1) {
+    arr.push(value)
+  }
+  return arr
+}
