@@ -8,19 +8,19 @@ const isGreaterThan10 = (num: number) => num > 10;
 
 test('should filter numbers correctly', () => {
   const numbers = [1, 2, 3, 4, 5];
-  expect(filterArray(numbers, isEven)).toEqual([2, 4]);
+  expect(filterArray<number>(numbers, isEven)).toEqual([2, 4]);
 })
 
 test('should filter strings correctly', () => {
   const words = ['hello', 'world', 'typescript'];
-  expect(filterArray(words, startsWithT)).toEqual(['typescript']);
+  expect(filterArray<string>(words, startsWithT)).toEqual(['typescript']);
 })
 
 test('should return an empty array if no elements match the predicate', () => {
   const numbers = [1, 2, 3, 4, 5];
-  expect(filterArray(numbers, isGreaterThan10)).toEqual([]);
+  expect(filterArray<number>(numbers, isGreaterThan10)).toEqual([]);
 })
 
 test('should work with an empty array', () => {
-  expect(filterArray([], isEven)).toEqual([]);
+  expect(filterArray<number>([], isEven)).toEqual([]);
 })
