@@ -52,3 +52,14 @@ export const scramble = (str: string, arr: number[]): string => {
 
   return newArr.join('')
 }
+
+// Option 2 - forEach
+export const scramble2 = (str: string, arr: number[]): string => {
+  const res = Array(str.length)
+
+  arr.forEach((target, i) => {
+    res[target] = str[i]
+  })
+
+  return res.join('')
+}
