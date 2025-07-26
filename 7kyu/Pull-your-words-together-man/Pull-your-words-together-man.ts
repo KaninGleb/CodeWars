@@ -49,7 +49,24 @@
 
 
 // ✅ SOLUTION
+// Option 1
 export const sentencify = (words: string[]): string => {
   const sentence = words.join(' ') + '.'
+  return sentence.charAt(0).toUpperCase() + sentence.slice(1)
+}
+
+
+// Option 2 - solution without build-in methods
+export const sentencify2 = (words: string[]): string => {
+  let sentence = ''
+  for (let i = 0; i < words.length; i++) {
+    sentence += words[i]
+    if (i !== words.length - 1) {
+      sentence += ' '
+    }
+  }
+
+  sentence += '.'
+
   return sentence.charAt(0).toUpperCase() + sentence.slice(1)
 }
