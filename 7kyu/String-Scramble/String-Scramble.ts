@@ -63,3 +63,19 @@ export const scramble2 = (str: string, arr: number[]): string => {
 
   return res.join('')
 }
+
+// Option 3 - solution without built-in methods
+export const scramble3 = (str: string, arr: number[]): string => {
+  const res = Array(str.length)
+
+  for (let i = 0; i < arr.length; i++) {
+    res[arr[i]] = str[i]
+  }
+
+  let resStr = ''
+  for (let i = 0; i < res.length; i++) {
+    resStr += res[i]
+  }
+
+  return resStr
+}
